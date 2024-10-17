@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -47,8 +48,8 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex justify-center p-16 items-center min-h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-      <div className="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full transition-all duration-500 ease-in-out transform hover:scale-105">
+    <div className="flex justify-center p-16 items-center min-h-screen ">
+      <div className="bg-white border-2 shadow-xl p-8 rounded-lg shadow-lg max-w-lg w-full transition-all duration-500 ease-in-out transform hover:scale-105">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Create Account</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -162,7 +163,7 @@ const SignUp = () => {
         {/* Sign In Link */}
         <p className="text-center text-gray-600 mt-4">
           Already have an account?{' '}
-          <a href="#" className="text-blue-500 hover:underline">Sign In</a>
+          <Link to="/login" className="text-blue-500 hover:underline">Sign In</Link>
         </p>
       </div>
     </div>
